@@ -1,0 +1,51 @@
+@use "variables" as *;
+body {
+  font-family: $font-main;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: $primary;
+  .bi-list {
+    font-size: 1.5em;
+  }
+}
+.nav-brand {
+  text-decoration: none;
+}
+.nav-list {
+  position: fixed;
+  display: block;
+  flex-direction: column;
+  justify-content: start;
+  background-color: $neutral;
+  height: 100vh;
+  width: 70%;
+  top: 0;
+  right: 0;
+  gap: 3em;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.open {
+  transform: translateX(0);
+}
+.close {
+  padding: 1em;
+  font-size: 1.5em;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  margin: 5em 0;
+  a {
+    text-decoration: none;
+    padding: 1em;
+    color: $secondary;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
