@@ -26,7 +26,6 @@ let buttonGet = document.querySelector(".result-btn");
 buttonGet.addEventListener("click", () => {
  let inputValue = document.getElementById("para").value;
  let newValue = "";
- let cartItem = null;
 
  for (let i = 0; i < inputValue.length; i++) {
   if (i % 2 === 0) {
@@ -34,9 +33,7 @@ buttonGet.addEventListener("click", () => {
   } else {
    newValue += inputValue[i].toLowerCase();
   }
-  cartItem++;
  }
 
  document.querySelector(".result").textContent += " " + newValue;
 });
-console.log(cartItem);
